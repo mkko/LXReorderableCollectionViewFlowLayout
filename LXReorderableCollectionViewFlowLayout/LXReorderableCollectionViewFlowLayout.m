@@ -275,6 +275,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
             if ([self.dataSource respondsToSelector:@selector(collectionView:canMoveItemAtIndexPath:)] &&
                ![self.dataSource collectionView:self.collectionView canMoveItemAtIndexPath:currentIndexPath]) {
+                gestureRecognizer.enabled = NO;
+                gestureRecognizer.enabled = YES;
                 return;
             }
             
